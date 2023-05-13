@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<BorderPane onMouseDragged="#draggedScene" onMousePressed="#pressedOnScene" prefHeight="650.0" prefWidth="1042.0" styleClass="mainWindowBP" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bzu.network.prj.networkproject.backend.Controllers.ClientController2">
+   <left>
+      <VBox alignment="CENTER" maxHeight="540.0" maxWidth="282.0" minHeight="540.0" minWidth="269.0" prefHeight="540.0" prefWidth="282.0" spacing="10.0" styleClass="leftHBox" BorderPane.alignment="CENTER">
+         <children>
+            <Group>
+               <children>
+                  <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="CHATS" textAlignment="CENTER" wrappingWidth="281.47314453125">
+                     <font>
+                        <Font name="System Bold" size="27.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Group>
+            <HBox alignment="CENTER" maxHeight="81.0" maxWidth="270.0" minHeight="70.0" minWidth="270.0" prefHeight="70.0" prefWidth="270.0" spacing="15.0" styleClass="buttonsHBox">
+               <children>
+                  <Group>
+                     <children>
+                        <MFXButton onAction="#refreshClientTable" prefHeight="31.0" prefWidth="51.0" styleClass="leftSideButtons" text="." />
+                        <FontIcon iconColor="#49a3f6" iconLiteral="fa-refresh" iconSize="21" layoutX="17.0" layoutY="23.0" />
+                     </children>
+                  </Group>
+                  <Group>
+                     <children>
+                        <MFXButton prefHeight="31.0" prefWidth="51.0" styleClass="leftSideButtons" text="." />
+                        <FontIcon iconColor="#49a3f6" iconLiteral="fa-video-camera" iconSize="20" layoutX="16.0" layoutY="23.0" />
+                     </children>
+                  </Group>
+                  <Group>
+                     <children>
+                        <MFXButton prefHeight="31.0" prefWidth="56.0" styleClass="leftSideButtons" text="." />
+                        <FontIcon iconColor="#49a3f6" iconLiteral="fa-pencil-square-o" iconSize="21" layoutX="19.0" layoutY="24.0" />
+                     </children>
+                  </Group>
+               </children>
+               <VBox.margin>
+                  <Insets left="3.0" right="3.0" top="3.0" />
+               </VBox.margin>
+            </HBox>
+            <Line endX="156.5502471923828" endY="-0.20710057020187378" fill="#7a4bd8" layoutY="50.0" startX="-107.74264526367188" startY="-0.20710134506225586" stroke="#7a4bd8">
+               <VBox.margin>
+                  <Insets left="3.0" />
+               </VBox.margin>
+            </Line>
+            <MFXScrollPane hbarPolicy="NEVER" maxHeight="403.0" minHeight="364.0" prefHeight="364.0" prefWidth="281.0" styleClass="leftListView">
+               <content>
+                  <VBox fx:id="clientListVB" alignment="TOP_CENTER" prefHeight="393.0" prefWidth="268.0" spacing="5.0" styleClass="leftListView">
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </VBox>
+               </content>
+            </MFXScrollPane>
+         </children></VBox>
+   </left>
+   <top>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="15.0" styleClass="topHBox" BorderPane.alignment="CENTER_LEFT">
+         <children>
+            <FontIcon fill="#6545de" iconLiteral="fa-comments" iconSize="25">
+               <HBox.margin>
+                  <Insets left="50.0" />
+               </HBox.margin>
+            </FontIcon>
+            <Label prefHeight="20.0" prefWidth="265.0" text="Network Project - Messenger" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="16.0" />
+               </font>
+               <HBox.margin>
+                  <Insets top="3.0" />
+               </HBox.margin>
+            </Label>
+            <Group>
+               <children>
+                  <MFXTextField alignment="TOP_LEFT" layoutY="1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="209.0" promptText="search" styleClass="searchBar" textLimit="20">
+                     <font>
+                        <Font name="Arial Bold" size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" />
+                     </padding>
+                     <textFill>
+                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.8700000047683716" />
+                     </textFill>
+                  </MFXTextField>
+                  <FontIcon iconColor="WHITE" iconLiteral="fa-search" iconSize="17" layoutX="179.0" layoutY="21.0" />
+               </children>
+               <HBox.margin>
+                  <Insets left="220.0" />
+               </HBox.margin>
+            </Group>
+            <FontIcon fill="WHITE" iconColor="WHITE" iconLiteral="fa-bell-o" iconSize="21" styleClass="bellIcon">
+               <HBox.margin>
+                  <Insets left="10.0" right="10.0" />
+               </HBox.margin>
+            </FontIcon>
+            <Group styleClass="profileCircle">
+               <children>
+                  <Circle fill="#131c2cf0" radius="21.0" stroke="WHITE" strokeType="OUTSIDE" styleClass="profileCircle" />
+                  <ImageView fitHeight="33.0" fitWidth="38.0" layoutX="-17.0" layoutY="-15.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/unnamed.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Group>
+            <MFXButton alignment="CENTER" buttonType="RAISED" depthLevel="LEVEL0" onAction="#closeAction" prefHeight="19.0" prefWidth="29.0" styleClass="exitButton" text="X" textFill="WHITE">
+               <font>
+                  <Font name="Barlow Condensed Bold" size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="25.0" left="30.0" />
+               </HBox.margin>
+            </MFXButton>
+         </children>
+      </HBox>
+   </top>
+   <right>
+      <VBox alignment="CENTER" prefHeight="540.0" prefWidth="263.0" styleClass="rightHBox" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="552.0" prefWidth="261.0" spacing="15.0" styleClass="vbInsideVBRight">
+               <children>
+                  <Group>
+                     <children>
+                        <Circle fill="#181f31" radius="34.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="2.0" />
+                        <FontIcon iconColor="#4e38a3" iconLiteral="fa-user" iconSize="45" layoutX="-16.0" layoutY="15.0" />
+                     </children>
+                  </Group>
+                  <Label fx:id="peerUserName" alignment="CENTER" prefHeight="33.0" prefWidth="268.0" style="-fx-font-size: 20px; -fx-font-family: Barlow Condensed Black; -fx-font-weight: 900;" text="Mohammed Tahayna" textFill="WHITE">
+                     <font>
+                        <Font name="Barlow Condensed Black" size="14.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="60.0" prefWidth="167.0" spacing="50.0" style="-fx-border-color: #6545DE; -fx-border-width: 1px 0px 1px 0px;">
+                     <children>
+                        <FontIcon iconColor="WHITE" iconLiteral="fa-facebook-square" iconSize="25" styleClass="iconHover" />
+                        <FontIcon iconColor="WHITE" iconLiteral="fa-bell-slash-o" iconSize="25" styleClass="iconHover" />
+                        <FontIcon iconColor="WHITE" iconLiteral="fa-search" iconSize="25" styleClass="iconHover" />
+                     </children>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets top="25.0" />
+               </padding>
+            </VBox>
+         </children></VBox>
+   </right>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="497.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox fx:id="chatHeader" alignment="CENTER_LEFT" prefHeight="62.0" prefWidth="497.0" spacing="10.0" styleClass="navbarClient">
+               <children>
+                  <FontIcon iconColor="WHITE" iconLiteral="fa-user" iconSize="35" />
+                  <Label fx:id="toChatPeerName" prefHeight="33.0" prefWidth="268.0" style="-fx-font-size: 20px; -fx-font-family: Barlow Condensed Black; -fx-font-weight: 900;" text="Welcome To UDP CHAT !" textFill="WHITE">
+                     <font>
+                        <Font name="Barlow Condensed Black" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="60.0" prefWidth="167.0" spacing="25.0" style="-fx-border-color: #6545DE; -fx-border-width: 0px 0px 0px 2px;">
+                     <children>
+                        <FontIcon iconColor="WHITE" iconLiteral="fa-phone" iconSize="25" styleClass="iconHover" />
+                        <FontIcon iconColor="WHITE" iconLiteral="fa-video-camera" iconSize="25" styleClass="iconHover" />
+                        <FontIcon iconColor="WHITE" iconLiteral="fa-info-circle" iconSize="25" styleClass="iconHover" />
+                     </children>
+                  </HBox>
+               </children>
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+               </VBox.margin>
+            </HBox>
+            <MFXScrollPane fx:id="msg_SP" hbarPolicy="NEVER" prefHeight="430.0" prefWidth="487.0" styleClass="msgScrollBar">
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
+               <content>
+                  <VBox fx:id="msgVBox" alignment="TOP_CENTER" prefHeight="422.0" prefWidth="470.0" styleClass="msgScrollBar">
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding></VBox>
+               </content>
+            </MFXScrollPane>
+            <HBox alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="487.0" spacing="5.0" styleClass="sendMsgClient">
+               <VBox.margin>
+                  <Insets left="10.0" right="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" top="2.0" />
+               </padding>
+               <children>
+                  <FontIcon iconColor="WHITE" iconLiteral="fa-file-image-o" iconSize="20">
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </FontIcon>
+                  <TextField fx:id="msgTxtField" prefHeight="36.0" prefWidth="367.0" promptText="Chat with me ..." style="-fx-background-color: #181F31; -fx-border-color: #6545DE;" styleClass="msgTF">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </TextField>
+                  <MFXButton onAction="#sendMsgButtonAction" prefHeight="36.0" prefWidth="115.0" styleClass="sendButton" text="Send" textFill="WHITE" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>

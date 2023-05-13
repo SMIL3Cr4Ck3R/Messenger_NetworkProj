@@ -1,0 +1,204 @@
+
+.mainWindowBP {
+
+    -fx-background-color: linear-gradient( to right, #171328 20%, #131C2C  ,#231834);
+    -fx-border-radius: 38px;
+    -fx-background-radius: 38px ;
+    -fx-border-width: 1px;
+    -fx-font-family: 'Source Sans Pro', sans-serif;
+
+}
+
+.topHBox  {
+    -fx-border-radius: 35px 35px 0px 0px;
+    -fx-background-radius: 35px 35px 0px 0px ;
+    -fx-border-color: #2B203A;
+    -fx-border-width: 0px 0px 2px 0px ;
+    -fx-font-family: 'Source Sans Pro', sans-serif;
+}
+
+.rightHBox  {
+    -fx-border-radius: 0px 0px 35px 0px;
+    -fx-background-radius: 0px 0px 35px 0px ;
+    -fx-border-color: #2B203A;
+    -fx-border-width: 0px 0px 0px 2px;
+
+}
+
+.vbInsideVBRight {
+
+    -fx-border-radius: 0px 0px 35px 0px;
+    -fx-background-radius: 0px 0px 35px 0px ;
+    -fx-border-color: #4E38A3;
+    -fx-border-width: 0px 0px 0px 2px;
+
+}
+
+.leftHBox  {
+    -fx-border-radius: 0px 0px 0px 35px;
+    -fx-background-radius: 0px 0px 0px 35px ;
+    -fx-border-color: #2B203A;
+    -fx-border-width: 0px 1px 0px 0px;
+
+}
+
+.searchBar {
+
+    -fx-background-color: #2d2643;
+    -fx-text-fill: #fff;
+    -fx-border-color: #2d2643;
+}
+
+.searchBar:hover {
+
+    -fx-border-color: #6545DE;
+
+}
+
+.exitButton {
+
+    -fx-background-color: #6545DE;
+
+}
+
+.exitButton:hover {
+
+    -fx-background-color: #fff;
+    -fx-background-radius: 5px;
+    -fx-text-fill: #6545DE;
+}
+
+.bellIcon:hover {
+
+    -fx-fill: #6545DE;
+    -fx-text-fill: #6545DE;
+
+}
+
+.profileCircle:hover {
+
+    -fx-stroke: #6545DE;
+
+}
+
+.leftListView {
+
+    -fx-background-color: transparent;
+    -fx-border-radius: 0px 0px 0px 35px;
+    -fx-background-radius: 0px 0px 0px 35px ;
+}
+
+.leftSideButtons {
+
+    -fx-background-color: #161D2E;
+    -fx-text-fill: #161D2E ;
+    -fx-font-family: "Open Sans Bold";
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+
+.filterChatsBox  {
+
+    -fx-background-color: #161D2E;
+}
+
+.buttonsHBox {
+    -fx-border-color: #6545DE ;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+}
+
+.clientBox {
+
+    -fx-border-color :  #6545DE;
+    -fx-background-radius :  9px;
+    -fx-background-color :  #19182B;
+    -fx-border-width :  2px;
+    -fx-border-radius :  10px;
+}
+
+.clientBox:hover {
+    -fx-border-color : #fff;
+
+}
+
+.navbarClient {
+
+    -fx-background-color: #181F31;
+    -fx-border-color : #6545DE;
+    -fx-border-radius :5px 5px 0px 0px;
+    -fx-background-radius: 5px 5px 0px 0px;
+    -fx-border-width : 2px;
+
+
+}
+
+
+.msgScrollBar {
+
+    -fx-background-color: #181F31;
+    fx-border-color : #6545DE;
+    -fx-border-radius : 5px 5px 5px 5px;
+    -fx-border-width: 2px;
+}
+
+.msgTF {
+
+    -fx-background-color: #181F31;
+    fx-border-color : #6545DE;
+    -fx-border-radius : 5px 0px 0px 5px;
+    -fx-border-width: 2px;
+    -fx-text-fill: #fff
+
+}
+
+.sendButton {
+
+    -fx-background-color: #161D2E;
+    -fx-text-fill: #fff ;
+    -fx-font-family: "Open Sans Bold";
+    -fx-border-radius: 0px 5px 5px 0px ;
+    -fx-background-radius: 0px 5px 5px 0px ;
+    -fx-border-color : #6545DE;
+    -fx-border-width: 2px;
+
+}
+
+.sendButton:hover {
+
+    -fx-background-color : #6545DE;
+
+}
+
+.iconHover{
+
+}
+
+.iconHover:hover {
+
+    -fx-text-fill: #4191DB;
+    -fx-fill: #4191DB;
+
+}
+
+.receivedMessageTextFlow {
+
+    -fx-background-color : #19182B;
+    -fx-text-fill: #9A97A7;
+    -fx-font-size: 14px;
+    -fx-background-radius: 15px;
+    -fx-border-radius: 15px ;
+    -fx-font-family: "Open Sans";
+
+}
+
+.sentMessageTextFlow {
+
+    -fx-background-color : #4E38A4;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-background-radius: 15px;
+    -fx-border-radius: 15px ;
+    -fx-font-family: "Open Sans";
+
+}
